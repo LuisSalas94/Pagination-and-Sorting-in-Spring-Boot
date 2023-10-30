@@ -1,13 +1,15 @@
 package net.fernandosalas.posts.service;
 
 import net.fernandosalas.posts.payload.PostDto;
+import net.fernandosalas.posts.payload.PostResponse;
 
 import java.util.List;
 
 public interface PostService {
     PostDto createPost(PostDto postDto);
 
-    List<PostDto> getAllPost();
+    //List<PostDto> getAllPost();
+    PostResponse getAllPost(int pageNo, int pageSize);
 
     PostDto getPostById(long id);
 
